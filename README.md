@@ -31,3 +31,12 @@ Right Fan:
 12V Power Supply:
 - Positive terminal of power supply → Fans' positive terminals.
 - Negative terminal of power supply (GND) → Common ground shared by the fans and connected to the ESP32's GND.
+
+
+
+
+
+
+Additional Notes:
+- Fan Driver/Transistor Circuit: You’ll need to use a fan driver (or an N-channel MOSFET or transistor) to interface between the 12V fans and the 3.3V logic from the ESP32. Each fan should have its own driver. Connect the driver’s gate/base to the corresponding ESP32 GPIO (5, 18, 19) for controlling the fans via PWM.
+- Common Ground: Ensure that the ESP32, fans, and power supply all share a common ground connection. This is crucial for the circuit to work correctly.
